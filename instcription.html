@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form action="sendToMySecondYearInput.php" method="get">
+            <fieldset>
+                <legend>Informations Personnelles :</legend>
+            <label for="surname">nom*</label>
+            <input id="surname" name="uname" type="text" required ><br>
+            <label for="name">prenom</label>
+            <input id="name" name="uname" type="text"><br>
+            <p>genre : </p>
+            <input id="feminin" name="genre" value="homme" type="radio">
+            <label for="feminin">feminin</label><br>
+
+            <input id="masculin" name="genre" value="homme" type="radio">
+            <label for="masculin">masculin</label><br><br>
+
+            <label for="date">date de naissance :</label>
+            <input id="date" name="date" type="date"><br><br>
+
+            <label for="mail">email*</label>
+            <input id="mail" name="mail" type="email" placeholder="yourmail@domain.com" required ><br><br>
+
+            <label for="pays">pays d'origine :</label> <br>
+            <select name="pays" id="pays">
+                <option value="fr" selected>France</option>
+                <option value="usa">U.S.A</option>
+                <option value="ch">Chine</option>
+                <option value="vt">Viêt Nam</option>
+            </select><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Les sports de combat :</legend>
+            <label for="niveau">niveau en karate :</label>
+            <input id="niveau" name="niveau" type="number" min="0" max="5"><br>
+
+            <label for="art"> Arts-martieaux préférés :</label> <br>
+            <input id="art" name="art"  type="checkbox">
+            <label for="art">Kung fu</label><br>
+            <input id="art" name="art"  type="checkbox">
+            <label for="art">Karaté</label><br>
+            <input id="art" name="art"  type="checkbox">
+            <label for="art">Full-contact</label><br><br>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Inscription :</legend>
+                <label for="mdp">mot de passe*</label>
+            <input id="mdp" name="mdp" type="password" required  pattern="[a-zA-Z0-9]{8,900}"><br><br>
+            <p>niveau dengagement :</p>
+            <input id="engagement" name="engagement"  type="checkbox">
+            <label for="engagement">basique (5€)</label><br>
+            <input id="engagement" name="engagement"  type="checkbox">
+            <label for="engagement">gold (15€)</label><br>
+            <input id="engagement" name="engagement"  type="checkbox">
+            <label for="engagement">tatane in your face (50€)</label><br><br>
+            
+            <label for="clauses" >j'ai bien lu les clauses que je n'ai pas lues*</label>
+            <input id="clauses" name="clauses"  type="checkbox" required><br><br>
+
+            
+            <label for="sms">Message pour Chuck</label>
+            <textarea id="sms" name="sms" placeholder="un inscrit sera tiré au sort, et verra son message transcrit à Chuck Norris."></textarea>
+            </fieldset>
+            
+            <br>
+            <input type="submit" value="Envoyer">
+        </form>
+    </body>
+
+</html>
