@@ -24,6 +24,52 @@ body{
     height: 150px;
 }
 /*--------------------------------------------------------------
+# Emoji main début
+--------------------------------------------------------------*/
+.emoji {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  animation: waving-hand 3.5s infinite;
+  animation-duration: 3.5s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: waving-hand;
+  animation-timeline: auto;
+  animation-range-start: normal;
+  animation-range-end: normal;
+  transform-origin: 95% 90%;
+}
+@keyframes waving-hand {
+10% {
+  transform: rotate(14deg);
+}
+20% {
+   transform: rotate(-8deg); 
+}
+30% {
+   transform: rotate(14deg); 
+}
+40% {
+  transform: rotate(-4.0deg); 
+}
+50% {
+   transform: rotate(10deg); 
+}
+60% {
+   transform: rotate(0deg); 
+}
+100% {
+  transform: rotate(0deg);
+}
+}
+/*--------------------------------------------------------------
 # Autre image
 --------------------------------------------------------------*/
 img{
