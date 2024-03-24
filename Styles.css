@@ -78,7 +78,6 @@ img{
     height: 150px;
     vertical-align: middle;
     border-style: none;
-    display: inline-block;
 }
 /*--------------------------------------------------------------
 # Titres
@@ -215,9 +214,17 @@ hr {
 /*--------------------------------------------------------------
 # Mes compÃ©tences
 --------------------------------------------------------------*/
+.skills .section-bg{
+  width: 90%;
+  padding: 20px;
+  margin: 100px auto;
+  display: block;
+  flex-direction: row;
+  justify-content: center;
+}
 .skills .progress {
     height: 60px;
-    display: block;
+    display: flex;
     background: none;
     border-radius: 0;
 }
@@ -234,7 +241,7 @@ hr {
     padding: 0;
     margin: 0 0 6px 0;
     text-transform: uppercase;
-    display: block;
+    display: flex;
     font-weight: 600;
     font-family: "Poppins", sans-serif;
     color: white;
@@ -255,42 +262,32 @@ hr {
     transition: .9s;
 }
 .skills-img {
+  display: flex;
     width: 60px;
     height: 60px;
     line-height: 60px;
     text-align: center;
     border-radius: 50%;
     margin: 0px auto 30px;
-    transition: all linear .3s;
-    -webkit-transition: all linear .3s;
-    -moz-transition: all linear .3s;
-    -ms-transition: all linear .3s;
-    -o-transition: all linear .3s;
+    flex-direction: column-reverse;
 }
 .skills-img img {
+    display: flex;
     width: auto;
     height: 60px;
-    transition: all linear .3s;
-    -webkit-transition: all linear .3s;
-    -moz-transition: all linear .3s;
-    -ms-transition: all linear .3s;
-    -o-transition: all linear .3s;
-}
-.skills-card {
-    background: var(--white);
-    text-align: center;
     border-radius: 5px;
-    padding: 30px 0px 0px;
-    margin-bottom: 30px;
-    -webkit-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.15);
-    box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.15);
-    transition: all linear .3s;
-    -webkit-transition: all linear .3s;
-    -moz-transition: all linear .3s;
-    -ms-transition: all linear .3s;
-    -o-transition: all linear .3s;
-    -webkit-transform: scale(1);
-    transform: scale(1);
+}
+/* **********************************
+#Logo effet
+************************************* */
+.skills-card {
+   margin: 0 10px;
+   box-shadow: 0 0 20px 2px rgb(0, 0, 0, .1);
+   transition: 1s;
+}
+.skills-card:hover {
+  transform: scale(1.3);
+  z-index: 2;
 }
 .skills-name {
     border-top: 1px solid var(--border);
@@ -300,47 +297,17 @@ hr {
     padding: 0px;
     outline: 0px;
 }
-[data-aos^=fade][data-aos^=fade].aos-animate {
-    opacity: 1;
-    transform: translateZ(0);
-}
-[data-aos][data-aos][data-aos-easing=ease-in-out-back], body[data-aos-easing=ease-in-out-back] [data-aos] {
-    transition-timing-function: cubic-bezier(.68,-.55,.265,1.55);
-}
-.col-6.col-sm-4.col-lg-2.aos-init.aos-animate {
-}
-[data-aos][data-aos][data-aos-duration="1000"], body[data-aos-duration="1000"] [data-aos] {
-    transition-duration: 1s;
-}
-[data-aos^=fade][data-aos^=fade] {
-    opacity: 1;
-    transition-property: opacity,transform;
-}
-@media (min-width: 576px)
-.col-sm-4 {
-    -ms-flex: 0 0 33.333333%;
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-}
-.col-6 {
-    flex: 0 0 auto;
-    width: 50%;
-}
-.col-6 {
-    -ms-flex: 0 0 50%;
-    flex: 0 0 50%;
-    max-width: 50%;
+.row.skills-parent {
+  width: 90%;
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-}
 .row>* {
     flex-shrink: 0;
-    width: 100%;
     max-width: 100%;
     padding-right: calc(var(--bs-gutter-x)/ 2);
     padding-left: calc(var(--bs-gutter-x)/ 2);
@@ -353,18 +320,13 @@ hr {
 *, ::after, ::before {
     box-sizing: border-box;
 }
-div {
-    display: block;
-}
+
 .row {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
-    display: flex;
+    display: block;
     flex: 1 0 100%;
     flex-wrap: wrap;
-    margin-top: calc(var(--bs-gutter-y) * -1);
-    margin-right: calc(var(--bs-gutter-x)/ -2);
-    margin-left: calc(var(--bs-gutter-x)/ -2);
 }
 /*--------------------------------------------------------------
 # Veilles
@@ -611,8 +573,7 @@ div {
   }
 
 .row {
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-right: -15px;
@@ -632,12 +593,6 @@ div {
   display: flex !important;
 }
 
-.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
-}
 /*--------------------------------------------------------------
 # Fond écran site
 --------------------------------------------------------------*/
