@@ -381,6 +381,20 @@ hr {
   line-height: 24px;
   font-size: 14px;
 }
+/* -----------------------------------
+Liens Actu veille
+------------------------------------ */
+.button {
+  background-color: #1c87c9;
+  color: white;
+  padding: 20px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 
 .testimonials .testimonial-item {
   box-sizing: content-box;
